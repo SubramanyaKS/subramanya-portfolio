@@ -1,24 +1,25 @@
-# My React Portfolio
+# Subramanya Portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f16a267e-7689-4a90-b42c-8becaad56141/deploy-status)](https://app.netlify.com/sites/subramanyaks/deploys)
-[![GitHub license](https://img.shields.io/github/license/SubramanyaKS/MYReactApp?style=for-the-badge)](https://github.com/SubramanyaKS/MYReactApp/blob/main/LICENCE)
-[![GitHub stars](https://img.shields.io/github/stars/SubramanyaKS/MYReactApp?style=for-the-badge)](https://github.com/SubramanyaKS/MYReactApp/stargazers)
-[![GitHub issues](https://img.shields.io/github/issues/SubramanyaKS/MYReactApp?style=for-the-badge)](https://github.com/SubramanyaKS/MYReactApp/issues)
-![Repository Size](https://img.shields.io/github/repo-size/SubramanyaKS/MYReactApp?style=for-the-badge)
-![Lines of Codes](https://img.shields.io/tokei/lines/github.com/SubramanyaKS/MYReactApp?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/SubramanyaKS/MYReactApp?style=for-the-badge)
+[![GitHub license](https://img.shields.io/github/license/SubramanyaKS/subramanya-portfolio?style=for-the-badge)](https://github.com/SubramanyaKS/subramanya-portfolio/blob/main/LICENCE)
+[![GitHub stars](https://img.shields.io/github/stars/SubramanyaKS/subramanya-portfolio?style=for-the-badge)](https://github.com/SubramanyaKS/subramanya-portfolio/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/SubramanyaKS/subramanya-portfolio?style=for-the-badge)](https://github.com/SubramanyaKS/subramanya-portfolio/issues)
+![Repository Size](https://img.shields.io/github/repo-size/SubramanyaKS/subramanya-portfolio?style=for-the-badge)
+![Lines of Codes](https://img.shields.io/tokei/lines/github.com/SubramanyaKS/subramanya-portfolio?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/SubramanyaKS/subramanya-portfolio?style=for-the-badge)
 
-<!--<img src="https://github.com/SubramanyaKS/MYReactApp/blob/main/public/images/preview.png" alt ="preview"/>-->
+<!--<img src="https://github.com/SubramanyaKS/subramanya-portfolio/blob/main/public/images/preview.png" alt ="preview"/>-->
 
-Hello folks.This is my new portfolio using React JS UI development library. React JS uses Virtual DOM, thereby creating web applications faster. You can find my old [website](https://subramanyaks.github.io).
+Hello folks, A modern, responsive personal portfolio website built with React, Vite, and Bootstrap — showcasing my projects, skills, and experience as a software developer. You can find my old [website](https://subramanyaks.github.io).
 
 
 ### Features.
 
-* Responsive UI
-* Smooth Navigation
-* Added small chatbot (rule based).
-* Smooth Animation
+- Fully responsive design (mobile-friendly)
+- Smooth page transitions and animations
+- Integrated chatbot (rule-based)
+- Dynamic projects section with JSON data
+- Contact form connected via EmailJS
 
 
 ### Technology used.
@@ -43,7 +44,7 @@ Hello folks.This is my new portfolio using React JS UI development library. Reac
 1. Fork the Project and clone Repository using git clone
 
 ```
-git clone https://github.com/SubramanyaKS/MyReactApp.git
+git clone https://github.com/SubramanyaKS/subramanya-portfolio.git
 ```
 
 2.  Install all dependency in package.json
@@ -67,20 +68,21 @@ http://localhost/5173
 
 ### Contribution
 
-if you want to contribute to this project. 
+Contributions, issues, and feature requests are welcome!  
+Feel free to fork this repo and submit a pull request.
 
 1. Fork the repository
-2. Create a new branch (any name except main and master)
+2. Create your feature branch 
 ```
-git checkout -b xyz
+git checkout -b feature/YourFeature
 ```
 3. Make changes and commit your changes.
 ```
 git commit -m "Changes in xyz"
 ```
-4. Push the changes to new branch.
+4. Push the changes to branch.
 ```
-git push origin xyz
+git push origin feature/YourFeature
 ```
 5. Open a pull request
 
@@ -89,6 +91,8 @@ git push origin xyz
 ### Author
 
 **Subramanya K S**
+🐦 [Twitter](https://twitter.com/developersubbu)
+🌐 [Portfolio](https://subramanya-portfolio.netlify.app)  
 
 
 ---
@@ -96,7 +100,7 @@ git push origin xyz
 
 The portfolio is deployed in netlify platform.
 
-[Portfolio](https://subramanyaks.netlify.app/)
+**Live Demo:** [https://subramanya-portfolio.netlify.app](https://subramanya-portfolio.netlify.app)
 
 ---
 ### License 📄.
@@ -106,9 +110,12 @@ This project is licensed under the GNU General public License v3 License - see t
 
 ---
 **Note:Particle effect has been removed. if you want just import the component at your desired page**
+
 **Note: For Particle Effect please refer:**             
 [This tutorial](https://www.youtube.com/watch?v=uuohRbc18zE)
 
+
+### 🌟 Show your support
 If you like this don't forget to ⭐ the repository.
 
 
