@@ -74,7 +74,6 @@ a {
 .main h1 {
   color: var(--color4);
   font-family: cursive;
-  font-family: "Pacifico";
 }
 .hi{
   color:var(--color2) !important;

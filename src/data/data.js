@@ -1,5 +1,5 @@
 import { links, skillImage } from "../utils/constant";
-import { Mail, X} from "lucide-react";
+import { Mail, X,Linkedin, Github, Youtube,Facebook,Instagram} from "lucide-react";
 
 export const projectsdata = [
   {
