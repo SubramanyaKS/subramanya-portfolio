@@ -1,12 +1,12 @@
 import { links, skillImage } from "../utils/constant";
-import { Facebook, Github, Instagram, Linkedin, Mail, X, Youtube } from "lucide-react";
+import { Mail, X} from "lucide-react";
 
 export const projectsdata = [
   {
     id: 1,
     title: "Weather Application",
     subtitle: "API Based Web Application",
-    description: "Developed a web application which uses openweathermap API to fetch the weather details of various city across the globe by giving city name as input.Used Django as web framework.",
+    description: "Developed a web application which uses openweathermap API to fetch the weather details of various city across the globe by giving city name as input.",
     image: "./images/weather.jpg",
     techStack: ["React JS", "Bootstrap"],
     githubLink: "https://github.com/SubramanyaKS/Weather-app/",
