@@ -215,7 +215,9 @@ export const aboutdetails = {
   image: "./images/subbu.png",
   resumeLink: links.resumeLink,
   tagline: "Learner|Programmer|Developer",
-  description: " A frontend developer based in Karnataka,India. I am currently working in Infosys. I passionate about upgrading my skills and also likes to get my hand dirty on new technology. I start my day with motive on being better then previous day. Learn new skills that helped me to do better work.I'm constantly open to new ideas and always look to reach out to others, share and discuss ideas with them, thereby learn and also help others grow too"
+description: `A a frontend developer based in Karnataka, India. I currently work at Infosys.
+I’m passionate about continuously upgrading my skills and getting my hands dirty with new technologies. I strive to be better than the previous day by learning, experimenting, and applying new ideas to my work.
+I’m always open to new ideas and enjoy collaborating, sharing knowledge, and learning from others—while helping them grow as well`
 }
 
 export const experiencedata = [

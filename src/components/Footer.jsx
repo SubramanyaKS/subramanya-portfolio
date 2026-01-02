@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <p  style={{fontFamily:"cursive"}} className="text-center">
         <b>
-          &copy;2025. Designed with{" "}
+          &copy;2025 Designed with{" "}
           <Heart
             fill="red"
             color="red"

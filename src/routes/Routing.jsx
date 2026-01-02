@@ -11,7 +11,7 @@ const Routing = () => {
        <Navbar />
        <Routes>
         {routingdetails.map((data)=>(
-        <Route key={data.id} exact path={data.path} Component={data.element} />
+        <Route key={data.id} path={data.path} Component={data.element} />
         ))}
        </Routes>
        <ChatBot/>

@@ -10,7 +10,7 @@ const ChatBotInput = ({OnChange,OnKeyPress,OnClick,value}) => {
             placeholder="Type your message..."
             value={value}
             onChange={OnChange}
-            onKeyPress={OnKeyPress}
+            onKeyDown={OnKeyPress}
           />
           <button type="button" className="btn-success chatbot-send border-0" onClick={OnClick} ><Send/> </button>
         </div>

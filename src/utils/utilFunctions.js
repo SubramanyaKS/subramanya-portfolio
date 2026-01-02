@@ -1,7 +1,8 @@
 export const resume = (link) => {
     window.open(
         link,
-        "_blank"
+        "_blank",
+        'noopener'
     );
 };
 

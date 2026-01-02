@@ -10,20 +10,17 @@ export const useChatBot = () => {
   const [loading,setLoading]=useState(false);
 
   const botreply = () => {
-
+    setLoading(true);
     try {
       const query = userInput.toLowerCase();
-      axios.post('https://subot-backend.onrender.com/ask', { query })
-        .then((res) => {
-          const botReply = { sender: "bot", text: res.data['response'] }
-          setLoading(!loading)
-          setMessages((prevMessage) => [...prevMessage, botReply]);
-        })
-        .catch((err) => console.log(err))
+      const res=axios.post('https://subot-backend.onrender.com/ask', { query });
+      const botReply = { sender: "bot", text: res.data['response'] };
+      setMessages((prevMessage) => [...prevMessage, botReply]);
     } catch (error) {
       console.error(error);
-
-    }
+    } finally {
+        setLoading(false);
+      }
   }
 
   const handleSendMessage = () => {
