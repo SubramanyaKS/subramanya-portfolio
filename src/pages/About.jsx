@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { aboutdetails } from "../data/data";
-// import Background from "../components/Background";
 import Heading from "../components/common/Heading";
 import splitWords from "../utils/splitWords";
 import { motion } from 'framer-motion';
@@ -14,9 +13,8 @@ const About = () => {
   const description = splitWords(aboutdetails.description);
 
   return (
-    <>
       <section className="about py-4" id="about">
-        <Heading title="About Me." />
+        <Heading title="About Me" />
         <Container fluid>
           <Row>
             <Col>
@@ -39,9 +37,7 @@ const About = () => {
             </Col>
           </Row>
         </Container>
-        {/* <Background id="tsparticles" /> */}
       </section>
-    </>
   );
 };
 export default About;

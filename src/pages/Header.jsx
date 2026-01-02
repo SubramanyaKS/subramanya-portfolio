@@ -2,7 +2,6 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Container } from 'react-bootstrap';
-// import Background from '../components/Background';
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import Reveal from "../components/common/Reveal";
 import { headerdata } from "../data/data";
@@ -21,7 +20,6 @@ const Header = () => {
               <Reveal>
                 <h1 className="mb-3 fs-1">{headerdata.name}</h1>
               </Reveal>
-              {/* </Center> */}
               <p className="react-typed">$
                 <ReactTyped
                   className="typed-text"
@@ -43,7 +41,6 @@ const Header = () => {
 
         </Row>
       </Container>
-      {/* <Background id="tsparticles" /> */}
     </section>
   );
 };
