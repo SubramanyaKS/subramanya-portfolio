@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavText = ({title}) => {
   return (
-    <h2>&lt; {title} /&gt;</h2>
+    <h6>&lt; {title} /&gt;</h6>
   )
 }
 

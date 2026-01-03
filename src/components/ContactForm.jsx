@@ -8,7 +8,7 @@ function ContactForm() {
 
   return (
     <Form onSubmit={(e)=>sendEmail(e)} className="m-5 p-3 contact-form">
-      <h5 className='text-white'>Get in Touch</h5>
+      <h5 className='form-title'>Get in Touch</h5>
       <Form.Group className="m-3 " controlId="formName">
         <Form.Control name="name" value={formData.name} onChange={(e)=>handleChange("name",e.target.value)} className="text-white bg-dark" type="text" placeholder="Your Name" />
       </Form.Group>

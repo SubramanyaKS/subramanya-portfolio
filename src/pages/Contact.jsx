@@ -11,7 +11,7 @@ const Contact = () => {
       <Heading title="Contact" />
       <Container fluid>
         <Container>
-          <p>
+          <p className="subline">
             If you have any question or do you want to contact me, please free
             to email me.
           </p>
