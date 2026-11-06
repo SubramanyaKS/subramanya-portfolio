@@ -1,18 +1,23 @@
-import React from 'react'
-import { Image } from 'react-bootstrap'
-import { chatbotImages } from '../utils/chatbot'
+import React from "react";
+import { MessageSquare, X } from "lucide-react";
+import { motion } from "framer-motion";
 
-const ChatBotButton = ({ OnClick, title }) => {
-    return (
-        <button
-            onClick={OnClick}
-            className="position-fixed bottom-0 end-0 translate-middle-y rounded-circle text-white border-0 fs-4 shadow-lg chatbot-button"
-            title={title}
-        >
-            {/* 💬 */}
-            <Image src={chatbotImages.chatbot} alt="icon" height={30} width={30} />
-        </button>
-    )
-}
+const ChatBotButton = ({ OnClick, title, isOpen }) => {
+  return (
+    <motion.button
+      type="button"
+      onClick={OnClick}
+      className="modern-chatbot-btn"
+      title={title}
+      aria-label={title}
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.94 }}
+    >
+      <div className="chatbot-btn-glow" />
+      {isOpen ? <X size={22} /> : <MessageSquare size={22} />}
+      <span className="chatbot-online-dot" />
+    </motion.button>
+  );
+};
 
-export default ChatBotButton
+export default ChatBotButton;

@@ -4,111 +4,71 @@ import { Mail, X,Linkedin, Github, Youtube,Facebook,Instagram} from "lucide-reac
 export const projectsdata = [
   {
     id: 1,
-    title: "Weather Application",
-    subtitle: "API Based Web Application",
-    description: "Developed a web application which uses openweathermap API to fetch the weather details of various city across the globe by giving city name as input.",
-    image: "./images/weather.jpg",
-    techStack: ["React JS", "Bootstrap"],
-    githubLink: "https://github.com/SubramanyaKS/Weather-app/",
-    websiteLink: "https://subramanyaks.github.io/Weather-app",
-    downloadLink: null
-  },
-  {
-    id: 2,
-    title: "React News App",
-    subtitle: "API Based Web Application.",
-    description:
-      "React JS-based online news web app that utilizes the NewsAPI.org API. It allows users to access and read news articles from a wide range of sources.",
-    image: "./images/news.jpg",
-    techStack: ["React JS", "Bootstrap"],
-    githubLink: "https://github.com/SubramanyaKS/React-News-App/",
+    title: "Pocket AI",
+    subtitle: "Offline Mobile AI Assistant",
+    description: "An offline-first mobile AI assistant powered by on-device GGUF inference via embedded llama.cpp. Features full-duplex voice interaction (STT/TTS), local SQLite chat storage, and offline function calling for native device tools (alarms, battery diagnostics, reminders, and flashlight).",
+    image: "./images/ai.jpg",
+    techStack: ["Flutter", "Dart", "llama.cpp", "SQLite", "Riverpod"],
+    githubLink: "https://github.com/SubramanyaKS/PocketAI",
     websiteLink: null,
     downloadLink: null
   },
   {
-    id: 3,
+    id: 2,
     title: "PhrasePic",
-    subtitle: "Image generator Website",
-    description:
-      "Application which generate Image based on the input prompt. It has developed using Next JS and Stability AI's Stable Diffusion model API hosted on Hugging Face",
-    image: "./images/ai.jpg",
-    techStack: ["Next JS", "React","Generative AI"],
+    subtitle: "Generative AI Image Generation Platform",
+    description: "Application that generates images based on natural language prompts. Developed with Next.js, React, and Stability AI's Stable Diffusion model API hosted on Hugging Face.",
+    image: "./images/phrasepics.png",
+    techStack: ["Next.js", "React", "Generative AI", "Hugging Face"],
     githubLink: "https://github.com/SubramanyaKS/PhrasePic",
     websiteLink: null,
     downloadLink: null
   },
   {
-    id: 4,
-    title: "Media Player Application",
-    subtitle: "Android application.",
-    description:
-      "Application which play the audio and video and able to move forward and backword of media using button.",
-    image: "./images/media.jpg",
-    techStack: ["Android", "Java"],
-    githubLink: "https://github.com/SubramanyaKS/MediaPlayer-Android-Application",
+    id: 3,
+    title: "Gemini SQL Interface",
+    subtitle: "An AI based SQL Interface",
+    description: "A compact, production-minded Streamlit application that converts natural-language questions into SQL using Google's Gemini API and executes safe, read-mostly queries against a Relational database.",
+    image: "./images/text-sql.png",
+    techStack: ["Python", "Streamlit", "SQL","GEMINI"],
+    githubLink: "https://github.com/SubramanyaKS/gemini-sql-interface",
     websiteLink: null,
+    downloadLink: null
+  },
+  {
+    id: 4,
+    title: "PhaseBot",
+    subtitle: "Flutter based AI chatbot",
+    description: "PhraseBot is a Flutter-based AI chatbot that provides real-time conversations using Google gemini API. It also features user authentication with Supabase for a secure and personalized experience.",
+    image: "./images/phrasebot.png",
+    techStack: ["Flutter", "Generative AI", "Gemini"],
+    githubLink: "https://github.com/SubramanyaKS/phrasebot",
+    websiteLink:null,
     downloadLink: null
   },
   {
     id: 5,
-    title: "Bus Reservation System",
-    subtitle: "A Dbms mini-project",
-    description:
-      "This Project is the DBMS mini-project and desktop application where we can reserve the bus seat,check the seat availability and view the seat arrangement do the payment after seat reservation.",
-    image: "./images/bus.jpg",
-    techStack: ["Java", "Oracle db"],
-    githubLink: "https://github.com/SubramanyaKS/busreservation",
-    websiteLink: null,
-    downloadLink: "https://github.com/SubramanyaKS/busreservation/blob/main/BusReservation.jar"
+    title: "Weather Application",
+    subtitle: "Real-Time Weather Web App",
+    description: "Responsive web application utilizing the OpenWeatherMap API to fetch live weather details, forecasts, and atmospheric conditions for global cities.",
+    image: "./images/weather.jpg",
+    techStack: ["React JS", "Bootstrap", "REST API"],
+    githubLink: "https://github.com/SubramanyaKS/Weather-app/",
+    websiteLink: "https://subramanyaks.github.io/Weather-app",
+    downloadLink: null
   },
   {
     id: 6,
-    title: "Random Quote Generator.",
-    subtitle: "html javascript based web app.",
-    description:
-      "A simple web application which display the quote with both text and speech using random quote api.",
-    image: "./images/quote.jpg",
-    techStack: ["Javascript", "CSS", "HTML", "Bootstrap"],
-    githubLink: "https://github.com/SubramanyaKS/RandomQuoteGenerator",
-    websiteLink: "https://subramanyaks.github.io/RandomQuoteGenerator",
-    downloadLink: null
-  },
-  {
-    id: 7,
-    title: "VTU SGPA CGPA Calculator.",
-    subtitle: "Java jar application.",
-    description:
-      "This project  which calculate the CGPA and SGPA of VTU students.Created both java jar application and android app",
-    image: "./images/cal.jpg",
-    techStack: ["Java", "Android"],
-    githubLink: "https://github.com/SubramanyaKS/VTU-CGPA_SGPA-Calculator/",
-    websiteLink: null,
-    downloadLink: "https://github.com/SubramanyaKS/Vtu-sgpa-calculator/blob/main/Vtu_SGPACGPA_Calculator_1.0.apk"
-  },
-  {
-    id: 8,
-    title: "Heart Disease Prediction System.",
-    subtitle: "Machine-learning project using regression model.",
-    description:
-      "This project predict the heart disease by various machine learning model using ‘heart.csv’ dataset.",
-    image: "./images/heart.jpg",
-    techStack: ["Python", "Jupyter Notebook"],
-    githubLink: "https://github.com/SubramanyaKS/Heart_Attack_Prediction",
-    websiteLink: null,
-    downloadLink: null,
-  },
-  {
-    id: 9,
-    title: "Diabeties Prediction System.",
-    subtitle: "Machine-learning project using regression model.",
-    description:
-      "In this project we determine the diabetes by building various machine learning model using ‘diabetes.csv’ dataset.",
-    image: "./images/diabeties.jpg",
-    techStack: ["Python", "Jupyter Notebook"],
-    githubLink: "https://github.com/SubramanyaKS/Diabetes_prediction",
+    title: "TalkTranslo",
+    subtitle: "Flutter based Translation App",
+    description: "TalkTranslo is a comprehensive Flutter-based translator application that supports real-time text translation, voice translation, image text recognition and translation, and multi-language text-to-speech capabilities.",
+    image: "./images/media.jpg",
+    techStack: ["Flutter", "Speech API", "Mobile Dev"],
+    githubLink: "https://github.com/SubramanyaKS/talktranslo",
     websiteLink: null,
     downloadLink: null
-  }
+  },
+  
 ]
 export const programskills = [
   {

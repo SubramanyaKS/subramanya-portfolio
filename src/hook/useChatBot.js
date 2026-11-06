@@ -1,44 +1,86 @@
 import { useState } from "react";
 import axios from "axios";
+import { rules, responses } from "../utils/chatbot";
+
+// Set to true once the backend server is running
+const USE_BACKEND = false;
+const BACKEND_URL = "https://subot-backend.onrender.com/ask";
 
 export const useChatBot = () => {
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello! How can I assist you today?" },
+    {
+      sender: "bot",
+      text: "Hello! 👋 I'm SuBot, Subramanya's portfolio assistant. Ask me anything about his skills, projects, experience, or education!",
+    },
   ]);
   const [isChatbotVisible, setIsChatbotVisible] = useState(false);
   const [userInput, setUserInput] = useState("");
-  const [loading,setLoading]=useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const botreply = () => {
+  // Match user input against predefined rules
+  const getPredefinedReply = (query) => {
+    const cleanQuery = query.toLowerCase().trim();
+
+    for (const [category, keywords] of Object.entries(rules)) {
+      const isMatch = keywords.some((kw) => {
+        const regex = new RegExp(`\\b${kw}\\b`, "i");
+        return regex.test(cleanQuery) || cleanQuery.includes(kw);
+      });
+      if (isMatch) {
+        return responses[category];
+      }
+    }
+
+    return responses.fallback;
+  };
+
+  const handleSendMessage = async (textToSend) => {
+    const messageText = (textToSend || userInput).trim();
+    if (!messageText) return;
+
+    // Add user message
+    const updatedMessages = [...messages, { sender: "user", text: messageText }];
+    setMessages(updatedMessages);
+    setUserInput("");
     setLoading(true);
-    try {
-      const query = userInput.toLowerCase();
-      const res=axios.post('https://subot-backend.onrender.com/ask', { query });
-      const botReply = { sender: "bot", text: res.data['response'] };
-      setMessages((prevMessage) => [...prevMessage, botReply]);
-    } catch (error) {
-      console.error(error);
-    } finally {
+
+    if (USE_BACKEND) {
+      try {
+        const res = await axios.post(BACKEND_URL, { query: messageText });
+        const botReplyText = res.data?.response || getPredefinedReply(messageText);
+        setMessages((prev) => [...prev, { sender: "bot", text: botReplyText }]);
+      } catch (error) {
+        console.warn("Backend unavailable, falling back to predefined answer:", error);
+        const fallbackReply = getPredefinedReply(messageText);
+        setMessages((prev) => [...prev, { sender: "bot", text: fallbackReply }]);
+      } finally {
         setLoading(false);
       }
-  }
-
-  const handleSendMessage = () => {
-    if (userInput.trim() === "") return;
-
-    const newMessages = [...messages, { sender: "user", text: userInput }];
-    setMessages(newMessages);
-    setLoading(!loading)
-
-    botreply();
-
-    setUserInput("");
+    } else {
+      // Natural brief typing simulation
+      setTimeout(() => {
+        const replyText = getPredefinedReply(messageText);
+        setMessages((prev) => [...prev, { sender: "bot", text: replyText }]);
+        setLoading(false);
+      }, 400);
+    }
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === "Enter") handleSendMessage();
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSendMessage();
+    }
   };
 
-  return { handleKeyPress, loading, messages, isChatbotVisible, setIsChatbotVisible, userInput, handleSendMessage, setUserInput }
-
-}
+  return {
+    handleKeyPress,
+    loading,
+    messages,
+    isChatbotVisible,
+    setIsChatbotVisible,
+    userInput,
+    handleSendMessage,
+    setUserInput,
+  };
+};
