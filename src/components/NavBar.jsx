@@ -1,56 +1,51 @@
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavText from "./NavText";
 
 const NavBar = () => {
   return (
     <Navbar
-      // style={{ color: "black" }}
       collapseOnSelect
       expand="lg"
-      bg="dark"
       variant="dark"
-      className="shadow-lg p-3 mb-5 bg-dark "
+      className="modern-navbar sticky-top"
     >
       <Container>
-        <Navbar.Brand
-          style={{
-            fontFamily: "Comic Sans MS, Comic Sans, cursive",
-            color: "#00ff0d",
-          }}
-        >
-          &lt;$ubramanya K $/&gt;
+        <Navbar.Brand as={NavLink} to="/" className="navbar-logo">
+          Subramanya K S
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav>
-            <Link className="navlink" to="/">
-            <NavText title='Home'/>
-            </Link>
-            <Link className="navlink" to="/about">
-              <NavText title='About'/>
-            </Link>
-            <Link className="navlink" to="/education">
-            <NavText title='Education'/>
-            </Link>
-            <Link className="navlink" to="/experience">
-            <NavText title='Experience'/>
-            </Link>
-            <Link className="navlink" to="/project">
-            <NavText title='Projects'/>
-            </Link>
-            <Link className="navlink" to="/skills">
-            <NavText title='Skills'/>
-            </Link>
-            <Link className="navlink" to="/contact">
-            <NavText title='Contact'/>
-            </Link>
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Nav className="align-items-lg-center">
+            <NavLink className="nav-link" end to="/">
+              <NavText title="Home" />
+            </NavLink>
+            <NavLink className="nav-link" to="/about">
+              <NavText title="About" />
+            </NavLink>
+            <NavLink className="nav-link" to="/education">
+              <NavText title="Education" />
+            </NavLink>
+            <NavLink className="nav-link" to="/experience">
+              <NavText title="Experience" />
+            </NavLink>
+            <NavLink className="nav-link" to="/project">
+              <NavText title="Projects" />
+            </NavLink>
+            <NavLink className="nav-link" to="/skills">
+              <NavText title="Skills" />
+            </NavLink>
+            <NavLink className="nav-link" to="/contact">
+              <NavText title="Contact" />
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
+
 export default NavBar;

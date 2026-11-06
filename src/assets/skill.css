@@ -1,9 +1,46 @@
-.card:hover{
-    background-color:#000 !important;
-    color:"#fff"!important;
-    transform: scale(1.02) !important;
-  overflow: hidden !important;
-  /* box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important; */
-  box-shadow: 0 4px 5px 3px #00ff00 !important;
-  /* rgba(117, 0, 250, 1) */
+/* Modern Skill Items */
+.modern-skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 95px;
+  height: 100px;
+  padding: 10px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+  margin: 6px;
+  cursor: default;
+}
+
+.modern-skill-item:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(34, 211, 238, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+.modern-skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.modern-skill-item:hover .modern-skill-icon {
+  transform: scale(1.1);
+}
+
+.modern-skill-name {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }

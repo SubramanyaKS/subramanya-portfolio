@@ -1,29 +1,41 @@
 import React from "react";
 import EducationCard from "../components/EducationCard";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { educationdata } from "../data/data";
 import Heading from "../components/common/Heading";
+import { motion } from "framer-motion";
 
-const Education1 = () => {
+const Education = () => {
   return (
-    <section className="education-content" id="education">
-      <Heading title="Education" />
-      <Container>
-        <div className="timeline">
-          {educationdata.map((data, i) => (
-            <div key={i}
-              className={`container-e ${
-                i % 2 === 0 ? "left-container" : "right-container"
-              }`}
+    <section className="education-section py-5" id="education">
+      <Heading title="Academic Background" />
+      <Container className="py-4">
+        <div className="text-center mb-5">
+          <p className="education-intro-text mx-auto">
+            My educational milestones in Computer Science, engineering fundamentals, and pre-university studies.
+          </p>
+        </div>
+
+        <div className="modern-timeline-wrapper">
+          {educationdata.map((item, idx) => (
+            <motion.div
+              key={item.id}
+              className="timeline-milestone-item"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: idx * 0.15 }}
             >
-              <div className="timeline-bullet"></div>
-              <EducationCard data={data} />
-              <span
-                className={
-                  i % 2 === 0 ? "left-container-arrow" : "right-container-arrow"
-                }
-              ></span>
-            </div>
+              {/* Timeline marker node */}
+              <div className="timeline-node">
+                <div className="timeline-node-inner" />
+              </div>
+
+              {/* Card content */}
+              <div className="timeline-milestone-content">
+                <EducationCard data={item} index={idx} />
+              </div>
+            </motion.div>
           ))}
         </div>
       </Container>
@@ -31,4 +43,4 @@ const Education1 = () => {
   );
 };
 
-export default Education1;
+export default Education;
