@@ -1,44 +1,98 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import Reveal from "../components/common/Reveal";
 import { headerdata } from "../data/data";
+import { links } from "../utils/constant";
 import HeaderPhoto from "../components/HeaderPhoto";
+import { ArrowRight, FileText, Send } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <section className="main py-5">
-      <Container fluid className="py-4">
-        <Row className="py-3">
-          <Col className="col-lg-6 col-mg-12 py-3 mr-auto">
-            <div className="ps-5">
-              <Reveal>
-                <h1 className="mb-3 text-center hi">Hi, I'm </h1>
-              </Reveal>
-              <Reveal>
-                <h1 className="mb-3 fs-1">{headerdata.name}</h1>
-              </Reveal>
-              <p className="react-typed">$
+    <section className="main hero-section py-5">
+      <Container className="py-4">
+        <Row className="align-items-center min-vh-75 py-4">
+          <Col lg={7} md={12} className="py-3">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="hero-text-container"
+            >
+              {/* Status Badge */}
+              <div className="hero-status-pill mb-3">
+                <span className="hero-status-dot" />
+                <span>Available for opportunities & projects</span>
+              </div>
+
+              {/* Greeting & Name */}
+              <p className="hero-greeting mb-1">Hello, I'm</p>
+              <h1 className="hero-name mb-3">{headerdata.name}</h1>
+
+              {/* Terminal typed string */}
+              <div className="hero-terminal-line mb-3">
+                <span className="terminal-prefix">&gt; </span>
                 <ReactTyped
-                  className="typed-text"
+                  className="hero-typed-text"
                   strings={headerdata.typedarr}
-                  typeSpeed={90}
-                  backSpeed={90}
+                  typeSpeed={70}
+                  backSpeed={50}
                   loop
-                  cursorChar="_"
+                  cursorChar="▋"
                 />
+              </div>
+
+              {/* Value Proposition */}
+              <p className="hero-tagline mb-4">
+                Software Engineer crafting scalable web applications, modern interactive UIs,
+                and AI-driven experiences with clean code and cutting-edge web technologies.
               </p>
-              <SocialMediaIcons />
-            </div>
-          </Col>
-          <Col className="col-lg-6 col-mg-12 pb-3 mr-auto">
-            <div className="text-center d-flex justify-content-center">
-              <HeaderPhoto image={headerdata.image} />
-            </div>
+
+              {/* Action Buttons */}
+              <div className="hero-cta-group mb-4">
+                <NavLink to="/project" className="hero-btn hero-btn-primary">
+                  <span>Explore Projects</span>
+                  <ArrowRight size={16} />
+                </NavLink>
+
+                {links.resumeLink && (
+                  <a
+                    href={links.resumeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-btn hero-btn-secondary"
+                  >
+                    <FileText size={16} />
+                    <span>View Resume</span>
+                  </a>
+                )}
+
+                <NavLink to="/contact" className="hero-btn hero-btn-outline">
+                  <Send size={15} />
+                  <span>Contact Me</span>
+                </NavLink>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="hero-social-wrapper">
+                <p className="hero-social-label">Connect with me:</p>
+                <SocialMediaIcons />
+              </div>
+            </motion.div>
           </Col>
 
+          <Col lg={5} md={12} className="py-3 text-center d-flex justify-content-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+            >
+              <HeaderPhoto image={headerdata.image} />
+            </motion.div>
+          </Col>
         </Row>
       </Container>
     </section>

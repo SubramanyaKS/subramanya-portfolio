@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const NavText = ({title}) => {
+const NavText = ({ title }) => {
   return (
-    <h6>&lt; {title} /&gt;</h6>
-  )
-}
+    <span className="nav-item-text">&lt; {title} /&gt;</span>
+  );
+};
 
-export default NavText
+export default NavText;

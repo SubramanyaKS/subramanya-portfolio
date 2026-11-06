@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const SkillPill = ({text}) => {
+const SkillPill = ({ text }) => {
   return (
-    <div className=' px-2 rounded-pill' style={{backgroundColor:"#0fd"}}>
+    <span className="skill-pill">
       {text}
-    </div>
-  )
-}
+    </span>
+  );
+};
 
-export default SkillPill
+export default SkillPill;

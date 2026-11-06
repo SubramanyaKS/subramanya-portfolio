@@ -215,7 +215,7 @@ export const aboutdetails = {
   image: "./images/subbu.png",
   resumeLink: links.resumeLink,
   tagline: "Learner|Programmer|Developer",
-description: `A a frontend developer based in Karnataka, India. I currently work at Infosys.
+description: `A frontend developer based in Karnataka, India. I currently work at Infosys.
 I’m passionate about continuously upgrading my skills and getting my hands dirty with new technologies. I strive to be better than the previous day by learning, experimenting, and applying new ideas to my work.
 I’m always open to new ideas and enjoy collaborating, sharing knowledge, and learning from others—while helping them grow as well`
 }
@@ -223,17 +223,37 @@ I’m always open to new ideas and enjoy collaborating, sharing knowledge, and l
 export const experiencedata = [
   {
     id: 1,
-    title: "Web Development Intern.",
+    title: "Software Engineer",
+    subtitle: "Infosys",
+    period: "2022 - Present",
+    type: "Full-Time",
+    location: "Karnataka, India",
+    description: "Contributing to enterprise frontend and web development, building scalable, responsive user interfaces using modern JavaScript and React ecosystem, and collaborating with cross-functional engineering teams.",
+    techStack: ["React JS", "JavaScript", "HTML5/CSS3", "REST APIs", "Git"],
+    image: "./images/infosys-logo.png",
+    githubLink: null,
+  },
+  {
+    id: 2,
+    title: "Web Development Intern",
     subtitle: "Ekathva Innovations Pvt. Ltd.",
-    description: "Done a Project titled 'Django Based REST API development for Ayucare Management'.One month online industry level internship helped me to gain knowledge about recent technology, ideologies and aesthetics of the company.Learnt about Django and REST API",
+    period: "Aug 2021 - Sep 2021",
+    type: "Internship",
+    location: "Remote",
+    description: "Developed a Django-based REST API for 'Ayucare Management'. Gained hands-on industry experience building structured backend services, database schema design, and API endpoint integration.",
+    techStack: ["Django", "Python", "REST API", "Database Design"],
     image: "./images/ekatvaI.jpg",
     githubLink: "https://github.com/SubramanyaKS/AyuCareManagement/",
   },
   {
-    id: 2,
-    title: "Web Development and Design Intern .",
-    subtitle: "The Sparks Foundation.",
-    description: "My First Internship helped me to gain some knowledge on web development. Worked on the project title 'Basic Banking System' which is demonstrate the basic banking operation.",
+    id: 3,
+    title: "Web Development & Design Intern",
+    subtitle: "The Sparks Foundation",
+    period: "Jun 2021 - Jul 2021",
+    type: "Internship",
+    location: "Remote",
+    description: "Built the 'Basic Banking System' project demonstrating core banking transactions, account flow simulation, user balance updates, and responsive frontend design.",
+    techStack: ["JavaScript", "HTML5", "CSS3", "Web Design"],
     image: "./images/Thesparks.jpg",
     githubLink: "https://github.com/SubramanyaKS/Task1-BasicBankingSystem/",
   }
@@ -312,26 +332,28 @@ export const educationdata = [
   {
     id: 1,
     college: "JNN College of Engineering",
-    university: "Visvesvaraya Technological University, Belagavi",
-    course: "Bachelor of Engineering",
+    university: "Visvesvaraya Technological University (VTU)",
+    course: "Bachelor of Engineering (B.E.)",
     specification: "Information Science and Engineering",
-    year: "2022"
+    year: "2018 - 2022",
+    status: "Graduated"
   },
   {
     id: 2,
-    college: "Vikasa Composite P U College, Shivamogga",
-    university: "Department of PU Education Board",
-    course: "Pre-University/12th",
-    specification: null,
-    year: "2018"
+    college: "Vikasa Composite P.U. College, Shivamogga",
+    university: "Department of Pre-University Education",
+    course: "Pre-University / 12th Standard",
+    specification: "PCMB / Science",
+    year: "2016 - 2018",
+    status: "Completed"
   },
   {
     id: 3,
     college: "Sri Ramakrishna Vidyanikethana, Shivamogga",
-    university: "Karnataka State Education and Examination board",
-    course: "SSLC",
-    specification: null,
-    year: "2016"
+    university: "Karnataka Secondary Education Examination Board (KSEEB)",
+    course: "Secondary School Leaving Certificate (SSLC / 10th)",
+    specification: "General High School Studies",
+    year: "2015 - 2016",
+    status: "Completed"
   }
-
 ]

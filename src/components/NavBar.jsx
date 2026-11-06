@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -7,41 +8,38 @@ import NavText from "./NavText";
 const NavBar = () => {
   return (
     <Navbar
-      // style={{ color: "black" }}
       collapseOnSelect
       expand="lg"
       variant="dark"
-      className="shadow-lg p-3 mb-5"
+      className="modern-navbar sticky-top"
     >
       <Container>
-        <Navbar.Brand
-          className="navbar-logo"
-        >
+        <Navbar.Brand as={NavLink} to="/" className="navbar-logo">
           Subramanya K S
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav>
+        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+          <Nav className="align-items-lg-center">
             <NavLink className="nav-link" end to="/">
-            <NavText title='Home'/>
+              <NavText title="Home" />
             </NavLink>
             <NavLink className="nav-link" to="/about">
-              <NavText title='About'/>
+              <NavText title="About" />
             </NavLink>
             <NavLink className="nav-link" to="/education">
-            <NavText title='Education'/>
+              <NavText title="Education" />
             </NavLink>
             <NavLink className="nav-link" to="/experience">
-            <NavText title='Experience'/>
+              <NavText title="Experience" />
             </NavLink>
             <NavLink className="nav-link" to="/project">
-            <NavText title='Projects'/>
+              <NavText title="Projects" />
             </NavLink>
             <NavLink className="nav-link" to="/skills">
-            <NavText title='Skills'/>
+              <NavText title="Skills" />
             </NavLink>
             <NavLink className="nav-link" to="/contact">
-            <NavText title='Contact'/>
+              <NavText title="Contact" />
             </NavLink>
           </Nav>
         </Navbar.Collapse>
@@ -49,4 +47,5 @@ const NavBar = () => {
     </Navbar>
   );
 };
+
 export default NavBar;
